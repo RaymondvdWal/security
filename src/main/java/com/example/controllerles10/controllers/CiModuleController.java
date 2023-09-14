@@ -12,11 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CiModuleController {
 
-    private final TelevisionService televisionService;
+
     private final CiModuleService ciModuleService;
 
-    public CiModuleController(TelevisionService televisionService, CiModuleService ciModuleSevice) {
-        this.televisionService = televisionService;
+    public CiModuleController(CiModuleService ciModuleSevice) {
         this.ciModuleService = ciModuleSevice;
     }
 

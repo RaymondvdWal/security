@@ -14,8 +14,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
-
 
 @RestController
 public class TelevisionsControllers {
@@ -57,7 +55,6 @@ public class TelevisionsControllers {
         @Valid @RequestBody TelevisionDto televisionDto) throws RecordNotFoundException {
         televisionService.updateTelevision(televisionId, televisionDto);
         return ResponseEntity.ok().body(televisionDto);
-
     }
 
     @PutMapping("/televisions/{id}/remote/{remote_controller_id}")
